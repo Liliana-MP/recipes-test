@@ -1,10 +1,11 @@
 import React from "react";
 import { RecipeCard } from "./RecipeCard";
 import mockData from "./mockData.json";
+import styles from "./recipe.module.scss";
 
 export const Recipes = () => {
   return (
-    <div>
+    <div className={styles.container}>
       {mockData.map((recipe) => (
         <RecipeCard
           key={recipe.id}
