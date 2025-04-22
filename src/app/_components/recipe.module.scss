@@ -1,3 +1,5 @@
+@use "../styles/variables.scss";
+
 .container {
   display: grid;
   gap: 20px;
@@ -5,19 +7,19 @@
 
 //inte mindre än 14px text
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: variables.$mobile-width) {
   .container {
     grid-template-columns: 1fr;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: variables.$tablet-width) {
   .container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: variables.$desktop-width) {
   .container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
