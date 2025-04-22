@@ -24,8 +24,8 @@ export const RecipeCard = ({
       <Image
         src={`https://img.koket.se/square-medium/${image.url}`}
         alt={image.name}
-        width={500}
-        height={500}
+        width={400}
+        height={400}
       />
       <h4>{title}</h4>
 
