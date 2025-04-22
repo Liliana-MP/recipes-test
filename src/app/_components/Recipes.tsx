@@ -1,16 +1,19 @@
 import React from "react";
 import { RecipeCard } from "./RecipeCard";
+import mockData from "./mockData.json";
 
 export const Recipes = () => {
-  const mock = [
-    { title: "recipe 1" },
-    { title: "recipe 2" },
-    { title: "recipe 3" },
-  ];
   return (
     <div>
-      {mock.map((r) => (
-        <RecipeCard key={r.title} title={r.title} />
+      {mockData.map((recipe) => (
+        <RecipeCard
+          key={recipe.id}
+          image={recipe.image}
+          title={recipe.name}
+          profiles={recipe.profiles}
+          sponsored={recipe.sponsored}
+          type={recipe.type}
+        />
       ))}
     </div>
   );
