@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-import "./base.scss";
+import "./styles/base.scss";
 
 export const metadata: Metadata = {
   title: "Recipes",
