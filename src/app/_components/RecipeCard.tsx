@@ -21,12 +21,13 @@ export const RecipeCard = ({
 }: Props) => {
   return (
     <div className={styles.container}>
-      <Image
-        src={`https://img.koket.se/square-medium/${image.url}`}
-        alt={image.name}
-        width={400}
-        height={400}
-      />
+      <div className={styles.imageTest}>
+        <Image
+          src={`https://img.koket.se/square-medium/${image.url}`}
+          alt={image.name}
+          fill
+        />
+      </div>
       <h4>{title}</h4>
 
       {profiles &&
