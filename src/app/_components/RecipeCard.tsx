@@ -37,10 +37,13 @@ export const RecipeCard = ({
         </div>
         <h4>{title}</h4>
 
-        {profiles &&
-          profiles.map((profile) => (
-            <span key={profile.id}>{profile.name}</span>
-          ))}
+        {profiles && (
+          <div className={styles.profiles}>
+            {profiles.map((profile) => (
+              <span key={profile.id}>{profile.name}</span>
+            ))}
+          </div>
+        )}
         <span>Type:{type}</span>
       </div>
     </div>

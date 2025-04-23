@@ -2,7 +2,7 @@
 
 .container {
   background-color: #fcf0e5;
-  padding: 5px;
+  padding: 8px;
   border-radius: 8px;
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 8px;
 }
 
 .imageContainer {
@@ -19,11 +19,18 @@
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .pill {
   position: absolute;
   width: fit-content;
   z-index: 1;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
 }
