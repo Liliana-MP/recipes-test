@@ -21,9 +21,14 @@
   margin-bottom: 8px;
 }
 
-.pill {
+.sponsoredPill {
   position: absolute;
   right: 0;
+  z-index: 1;
+}
+
+.typePill {
+  position: absolute;
   z-index: 1;
 }
 

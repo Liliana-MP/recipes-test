@@ -17,13 +17,17 @@ interface Props {
 
 export const Card = ({ data }: Props) => {
   const { sponsored, name, profiles, type, image } = data;
+
   return (
     <div className={styles.container}>
       {sponsored && (
-        <div className={styles.pill}>
+        <div className={styles.sponsoredPill}>
           <Pill title="Sponsrat" />
         </div>
       )}
+      <div className={styles.typePill}>
+        <Pill title={type} />
+      </div>
       <div className={styles.recipeContainer}>
         <div className={styles.imageContainer}>
           <Image

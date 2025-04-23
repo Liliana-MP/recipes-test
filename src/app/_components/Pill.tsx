@@ -5,5 +5,9 @@ interface Props {
 }
 
 export const Pill = ({ title }: Props) => {
-  return <div className={styles.container}>{title}</div>;
+  return (
+    <div className={styles.container}>
+      <p className={styles.bla}>{title}</p>
+    </div>
+  );
 };
