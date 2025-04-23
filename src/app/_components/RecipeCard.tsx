@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./recipeCard.module.scss";
-import { SponsoredPill } from "./SponsoredPill";
+import { Pill } from "./Pill";
 
 interface Props {
   image: {
@@ -24,7 +24,7 @@ export const RecipeCard = ({
     <div className={styles.container}>
       {sponsored && (
         <div className={styles.pill}>
-          <SponsoredPill />
+          <Pill title="Sponsrat" />
         </div>
       )}
       <div className={styles.recipeContainer}>
