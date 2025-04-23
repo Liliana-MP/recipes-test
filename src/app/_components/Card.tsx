@@ -3,17 +3,20 @@ import styles from "./card.module.scss";
 import { Pill } from "./Pill";
 
 interface Props {
-  image: {
-    url: string;
+  data: {
     name: string;
+    profiles?: { name: string; id: number }[];
+    sponsored?: boolean;
+    type: string;
+    image: {
+      url: string;
+      name: string;
+    };
   };
-  title: string;
-  profiles?: { name: string; id: number }[];
-  sponsored?: boolean;
-  type: string;
 }
 
-export const Card = ({ image, title, profiles, sponsored, type }: Props) => {
+export const Card = ({ data }: Props) => {
+  const { sponsored, name, profiles, type, image } = data;
   return (
     <div className={styles.container}>
       {sponsored && (
@@ -30,7 +33,7 @@ export const Card = ({ image, title, profiles, sponsored, type }: Props) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <h4>{title}</h4>
+        <h4>{name}</h4>
 
         {profiles && (
           <div className={styles.profiles}>
