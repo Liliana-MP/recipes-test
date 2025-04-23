@@ -5,8 +5,6 @@
   gap: 20px;
 }
 
-//inte mindre än 14px text
-
 @media screen and (min-width: variables.$mobile-width) {
   .container {
     grid-template-columns: 1fr;

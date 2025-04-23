@@ -21,7 +21,7 @@ export const RecipeCard = ({
 }: Props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.imageTest}>
+      <div className={styles.imageContainer}>
         <Image
           src={`https://img.koket.se/square-medium/${image.url}`}
           alt={image.name}
