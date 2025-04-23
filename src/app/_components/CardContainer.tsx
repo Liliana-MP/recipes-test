@@ -6,8 +6,8 @@ import styles from "./cardContainer.module.scss";
 export const CardContainer = () => {
   return (
     <div className={styles.container}>
-      {mockData.map((recipe) => (
-        <Card data={recipe} key={recipe.id} />
+      {mockData.map((data) => (
+        <Card data={data} key={data.id} />
       ))}
     </div>
   );
