@@ -2,6 +2,7 @@
   background-color: #fcf0e5;
   padding: 8px;
   border-radius: 8px;
+  position: relative;
 }
 
 .recipeContainer {
@@ -22,7 +23,7 @@
 
 .pill {
   position: absolute;
-  width: fit-content;
+  right: 0;
   z-index: 1;
 }
 
