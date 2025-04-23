@@ -1,9 +1,9 @@
 import React from "react";
 import { Card } from "./Card";
 import mockData from "./mockData.json";
-import styles from "./recipes.module.scss";
+import styles from "./cardContainer.module.scss";
 
-export const Recipes = () => {
+export const CardContainer = () => {
   const articles = mockData.filter(
     (recipe) => recipe.type.toLowerCase() === "article"
   );
