@@ -11,3 +11,8 @@
     text-transform: uppercase;
   }
 }
+
+.sponsoredPill {
+  @extend .container;
+  background-color: #e97b5f;
+}

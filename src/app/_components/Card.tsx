@@ -22,7 +22,7 @@ export const Card = ({ data }: Props) => {
     <div className={styles.container}>
       {sponsored && (
         <div className={styles.sponsoredPill}>
-          <Pill title="Sponsrat" />
+          <Pill title="Sponsrat" sponsored />
         </div>
       )}
       <div className={styles.typePill}>
@@ -46,7 +46,6 @@ export const Card = ({ data }: Props) => {
             ))}
           </div>
         )}
-        <span>Type:{type}</span>
       </div>
     </div>
   );

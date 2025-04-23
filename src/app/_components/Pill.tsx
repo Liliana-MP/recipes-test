@@ -2,11 +2,12 @@ import styles from "./pill.module.scss";
 
 interface Props {
   title: string;
+  sponsored?: boolean;
 }
 
-export const Pill = ({ title }: Props) => {
+export const Pill = ({ title, sponsored }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={sponsored ? styles.sponsoredPill : styles.container}>
       <p className={styles.bla}>{title}</p>
     </div>
   );
