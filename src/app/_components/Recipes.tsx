@@ -4,18 +4,41 @@ import mockData from "./mockData.json";
 import styles from "./recipe.module.scss";
 
 export const Recipes = () => {
+  const articles = mockData.filter(
+    (recipe) => recipe.type.toLowerCase() === "article"
+  );
+  const recipes = mockData.filter(
+    (recipe) => recipe.type.toLowerCase() === "recipe"
+  );
+
   return (
-    <div className={styles.container}>
-      {mockData.map((recipe) => (
-        <RecipeCard
-          key={recipe.id}
-          image={recipe.image}
-          title={recipe.name}
-          profiles={recipe.profiles}
-          sponsored={recipe.sponsored}
-          type={recipe.type}
-        />
-      ))}
+    <div>
+      <h4>Recept</h4>
+      <div className={styles.container}>
+        {recipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            image={recipe.image}
+            title={recipe.name}
+            profiles={recipe.profiles}
+            sponsored={recipe.sponsored}
+            type={recipe.type}
+          />
+        ))}
+      </div>
+      <h4>Artiklar</h4>
+      <div className={styles.container}>
+        {articles.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            image={recipe.image}
+            title={recipe.name}
+            profiles={recipe.profiles}
+            sponsored={recipe.sponsored}
+            type={recipe.type}
+          />
+        ))}
+      </div>
     </div>
   );
 };

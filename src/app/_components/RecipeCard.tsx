@@ -33,6 +33,7 @@ export const RecipeCard = ({
             src={`https://img.koket.se/square-medium/${image.url}`}
             alt={image.name}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <h4>{title}</h4>
