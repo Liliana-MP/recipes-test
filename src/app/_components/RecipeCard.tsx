@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./recipeCard.module.scss";
+import { SponsoredPill } from "./SponsoredPill";
 
 interface Props {
   image: {
@@ -32,7 +33,7 @@ export const RecipeCard = ({
 
       {profiles &&
         profiles.map((profile) => <span key={profile.id}>{profile.name}</span>)}
-      {sponsored && <span>Sponsored:{sponsored.toString()}</span>}
+      {sponsored && <SponsoredPill />}
       <span>Type:{type}</span>
     </div>
   );
