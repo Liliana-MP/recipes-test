@@ -22,19 +22,27 @@ export const RecipeCard = ({
 }: Props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        <Image
-          src={`https://img.koket.se/square-medium/${image.url}`}
-          alt={image.name}
-          fill
-        />
-      </div>
-      <h4>{title}</h4>
+      {sponsored && (
+        <div className={styles.pill}>
+          <SponsoredPill />
+        </div>
+      )}
+      <div className={styles.recipeContainer}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={`https://img.koket.se/square-medium/${image.url}`}
+            alt={image.name}
+            fill
+          />
+        </div>
+        <h4>{title}</h4>
 
-      {profiles &&
-        profiles.map((profile) => <span key={profile.id}>{profile.name}</span>)}
-      {sponsored && <SponsoredPill />}
-      <span>Type:{type}</span>
+        {profiles &&
+          profiles.map((profile) => (
+            <span key={profile.id}>{profile.name}</span>
+          ))}
+        <span>Type:{type}</span>
+      </div>
     </div>
   );
 };

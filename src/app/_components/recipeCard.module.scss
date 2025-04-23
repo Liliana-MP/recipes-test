@@ -1,12 +1,15 @@
 @use "../styles/variables.module.scss";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: lightgray;
   padding: 10px;
   border-radius: 8px;
+}
+
+.recipeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .imageContainer {
@@ -15,4 +18,10 @@
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.pill {
+  position: absolute;
+  width: fit-content;
+  z-index: 1;
 }
