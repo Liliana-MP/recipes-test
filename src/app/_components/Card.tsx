@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./recipeCard.module.scss";
+import styles from "./card.module.scss";
 import { Pill } from "./Pill";
 
 interface Props {
@@ -13,13 +13,7 @@ interface Props {
   type: string;
 }
 
-export const RecipeCard = ({
-  image,
-  title,
-  profiles,
-  sponsored,
-  type,
-}: Props) => {
+export const Card = ({ image, title, profiles, sponsored, type }: Props) => {
   return (
     <div className={styles.container}>
       {sponsored && (

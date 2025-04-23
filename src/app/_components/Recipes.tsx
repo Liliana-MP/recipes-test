@@ -1,5 +1,5 @@
 import React from "react";
-import { RecipeCard } from "./RecipeCard";
+import { Card } from "./Card";
 import mockData from "./mockData.json";
 import styles from "./recipes.module.scss";
 
@@ -16,7 +16,7 @@ export const Recipes = () => {
       <h2 className={styles.title}>Recept</h2>
       <div className={styles.container}>
         {recipes.map((recipe) => (
-          <RecipeCard
+          <Card
             key={recipe.id}
             image={recipe.image}
             title={recipe.name}
@@ -29,7 +29,7 @@ export const Recipes = () => {
       <h2 className={styles.title}>Artiklar</h2>
       <div className={styles.container}>
         {articles.map((recipe) => (
-          <RecipeCard
+          <Card
             key={recipe.id}
             image={recipe.image}
             title={recipe.name}
