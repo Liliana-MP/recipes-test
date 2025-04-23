@@ -18,6 +18,8 @@ interface Props {
 export const Card = ({ data }: Props) => {
   const { sponsored, name, profiles, type, image } = data;
 
+  const typeText = type === "article" ? "Artikel" : "Recept";
+
   return (
     <div className={styles.container}>
       {sponsored && (
@@ -26,7 +28,7 @@ export const Card = ({ data }: Props) => {
         </div>
       )}
       <div className={styles.typePill}>
-        <Pill title={type} />
+        <Pill title={typeText} />
       </div>
       <div className={styles.recipeContainer}>
         <div className={styles.imageContainer}>
