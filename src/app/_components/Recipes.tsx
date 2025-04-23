@@ -1,7 +1,7 @@
 import React from "react";
 import { RecipeCard } from "./RecipeCard";
 import mockData from "./mockData.json";
-import styles from "./recipe.module.scss";
+import styles from "./recipes.module.scss";
 
 export const Recipes = () => {
   const articles = mockData.filter(
@@ -13,7 +13,7 @@ export const Recipes = () => {
 
   return (
     <div>
-      <h4>Recept</h4>
+      <h2 className={styles.title}>Recept</h2>
       <div className={styles.container}>
         {recipes.map((recipe) => (
           <RecipeCard
@@ -26,7 +26,7 @@ export const Recipes = () => {
           />
         ))}
       </div>
-      <h4>Artiklar</h4>
+      <h2 className={styles.title}>Artiklar</h2>
       <div className={styles.container}>
         {articles.map((recipe) => (
           <RecipeCard
