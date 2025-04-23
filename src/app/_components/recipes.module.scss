@@ -1,0 +1,28 @@
+@use "../styles/variables.module.scss";
+
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+@media screen and (min-width: variables.$mobile-width) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: variables.$tablet-width) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: variables.$desktop-width) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.title {
+  margin: 8px 0px;
+}
