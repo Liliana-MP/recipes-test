@@ -1,8 +1,8 @@
 .container {
   display: flex;
   padding: 4px 8px;
-  background-color: #2e8b57;
-  color: rgb(237, 243, 234);
+  background-color: #2e6847;
+  color: #fff;
   border-radius: 12px;
   font-weight: bold;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -11,5 +11,5 @@
 
 .sponsoredContainer {
   @extend .container;
-  background-color: #e97b5f;
+  background-color: #803044;
 }
