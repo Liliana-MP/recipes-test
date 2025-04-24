@@ -27,9 +27,11 @@ export const Card = ({ data }: Props) => {
           <Pill title="Sponsrat" sponsored />
         </div>
       )}
+
       <div className={styles.typePill}>
         <Pill title={typeText} />
       </div>
+
       <div className={styles.recipeContainer}>
         <div className={styles.imageContainer}>
           <Image
@@ -39,7 +41,7 @@ export const Card = ({ data }: Props) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <h4>{name}</h4>
+        <h4 className={styles.title}>{name}</h4>
 
         {profiles && (
           <div className={styles.profiles}>
